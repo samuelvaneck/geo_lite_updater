@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  geo_lite_updater:
+    image: ghcr.io/samuelvaneck/geo_lite_updater:latest
+    environment: &envs
+      - GEO_IP_LICENSE_KEY=${GEO_IP_LICENSE_KEY}
+      - CRON_SCHEDULE="5 0 * * *"
+    volumes:
+      volumes:
+        - ./db:/db
