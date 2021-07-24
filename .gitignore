@@ -1,1 +1,2 @@
 .env
+db/GeoLite2-City.mmdb
